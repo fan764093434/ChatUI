@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:RoundLayout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_time"
+        style="@style/MessageDateTimeStyle"
+        android:text="2017-03-27 14:59:00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/size_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/ChatUserNameStyle"
+            android:layout_marginLeft="@dimen/size_avatar"
+            android:layout_toRightOf="@+id/user_avatar"
+            android:text="樊述炜"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/user_avatar"
+                style="@style/ChatAvatarStyleReceive"
+                android:src="@drawable/icon_logo"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_icon_location_left"/>
+
+            <com.fsw.chat_ui.widget.CircleRelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="-23dp"
+                android:background="@drawable/chat_location_item_back"
+                RoundLayout:roundLayoutRadius="60dp">
+
+                <com.fsw.chat_ui.widget.CircleRelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerInParent="true"
+                    RoundLayout:roundLayoutRadius="55dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/chat_icon_location_example"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#44000000"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="杭州市西湖区"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="精确到5M"
+                            android:textColor="@color/white"
+                            android:textSize="9sp"/>
+                    </LinearLayout>
+                </com.fsw.chat_ui.widget.CircleRelativeLayout>
+            </com.fsw.chat_ui.widget.CircleRelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

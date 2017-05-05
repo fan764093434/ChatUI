@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_loginbg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/chat_voice_call_nickname_back"
+        android:padding="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="重丶楼"
+        android:textColor="@color/chatColorA"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/user_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:padding="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="您正在发起语音通话请求"
+        android:textColor="@color/chatColorA"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/user_avatar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_above="@+id/siri_wave"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/chat_voice_call_avatar_back_male"
+        android:padding="18dp"
+        android:src="@drawable/icon_logo"/>
+
+    <com.fsw.chat_ui.widget.SiriWaveViewNine
+        android:id="@+id/siri_wave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/net_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/siri_wave"
+        android:layout_centerHorizontal="true"
+        android:padding="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="网络良好，正在等待对方接听"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/btn_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/chat_voice_call_add_back"
+        android:padding="18dp"
+        android:src="@drawable/chat_voice_call_add"/>
+
+    <LinearLayout
+        android:id="@+id/btn_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/chat_voice_call_send_message_back"
+            android:padding="18dp"
+            android:src="@drawable/chat_voice_call_send_message"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/chat_voice_call_stop_call_back"
+            android:padding="18dp"
+            android:src="@drawable/chat_voice_call_stop_call"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/chat_voice_hands_free_back"
+            android:padding="18dp"
+            android:src="@drawable/chat_voice_call_hands_free"/>
+    </LinearLayout>
+</RelativeLayout>

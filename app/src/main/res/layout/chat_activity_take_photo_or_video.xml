@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chatTransparent">
+
+    <SurfaceView
+        android:id="@+id/camera_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+        android:padding="16dp"
+        android:src="@drawable/chat_icon_button_clear" />
+
+    <ImageView
+        android:id="@+id/light"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="21dp"
+        android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+        android:padding="11dp"
+        android:src="@drawable/chat_icon_flash_lamp_auto"
+        android:layout_alignTop="@+id/change"
+        android:layout_toLeftOf="@+id/change"
+        android:layout_toStartOf="@+id/change"
+        android:layout_marginEnd="21dp"/>
+
+    <ImageView
+        android:id="@+id/change"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+        android:padding="11dp"
+        android:src="@drawable/chat_icon_change_camera" />
+
+    <LinearLayout
+        android:id="@+id/footer_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cameraSettingBtnBackColorNormal"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/edit_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chat_icon_camera_edit" />
+        </LinearLayout>
+
+        <com.fsw.chat_ui.widget.CameraButton
+            android:id="@+id/camera_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/more_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chat_icon_button_camera_adjustment" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/camera_focus"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/chat_camera_focus_abroad_ring"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/chat_camera_focus_inner_circle" />
+    </LinearLayout>
+</RelativeLayout>

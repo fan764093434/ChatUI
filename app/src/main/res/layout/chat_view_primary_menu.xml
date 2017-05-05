@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fsw.chat_ui.widget.ChatPrimaryMenuBase xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.fsw.chat_ui.widget.ChatInputMenu
+        android:id="@+id/chat_input_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.fsw.chat_ui.widget.ChatOperateMenu
+        android:id="@+id/chat_operate_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</com.fsw.chat_ui.widget.ChatPrimaryMenuBase>

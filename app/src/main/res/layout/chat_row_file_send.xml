@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_time"
+        style="@style/MessageDateTimeStyle"
+        android:text="2017-03-27 14:59:00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:gravity="right">
+
+        <View
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="1dp"/>
+
+        <com.fsw.chat_ui.widget.SendMessageTip
+            android:layout_width="@dimen/chat_row_tip_width"
+            android:layout_height="@dimen/chat_row_tip_width"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="@dimen/chat_row_tip_width"
+            android:layout_height="@dimen/chat_row_tip_width"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/chat_icon_fail_tip"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/user_avatar"
+            android:background="@drawable/chat_bubble_send_message_blue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.fsw.chat_ui.widget.SquareLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/light_blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="TXT"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+            </com.fsw.chat_ui.widget.SquareLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:minWidth="100dp"
+                    android:text="马蓉道歉书.txt"
+                    android:textColor="@color/extraMenuName"
+                    android:textSize="11sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="100M"
+                        android:textColor="@color/chatRowMessageUserNameColor"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已发送"
+                        android:textColor="@color/chatRowMessageUserNameColor"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            style="@style/ChatAvatarStyleSend"
+            android:src="@drawable/icon_logo"/>
+    </LinearLayout>
+</LinearLayout>

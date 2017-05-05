@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/chatOperateViewBack"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/chatOperateViewBack"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/microphone_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/microphone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/chat_icon_microphone_normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/chat_icon_image_normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/take_photo_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/take_photo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/chat_camera_btn_back"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sen_packet_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/sen_packet"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/chat_redpacket_btn_back"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/chat_device_btn_back"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/open_emoji_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/open_emoji"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/chat_icon_emoticon_normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/open_extra_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/open_extra"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/chat_icon_more_normal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/extend_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+
+        <com.fsw.chat_ui.widget.ChatImageMenu
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.fsw.chat_ui.widget.ChatEmojiMenu
+            android:id="@+id/emoji_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.fsw.chat_ui.widget.ChatExtraMenu
+            android:id="@+id/extra_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

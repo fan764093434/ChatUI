@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_time"
+        style="@style/MessageDateTimeStyle"
+        android:text="2017-03-27 14:59:00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="@dimen/size_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/ChatUserNameStyle"
+            android:layout_marginLeft="@dimen/size_avatar"
+            android:layout_toRightOf="@+id/user_avatar"
+            android:text="樊述炜"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/user_avatar"
+                style="@style/ChatAvatarStyleReceive"
+                android:src="@drawable/icon_logo"/>
+
+            <LinearLayout
+                android:id="@+id/bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/user_avatar"
+                android:background="@drawable/chat_bubble_receive_message_blue"
+                android:orientation="horizontal">
+
+                <com.fsw.chat_ui.widget.SquareLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_blue">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="MP4"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"/>
+                </com.fsw.chat_ui.widget.SquareLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:minWidth="100dp"
+                        android:text="王宝强捉奸马蓉视频曝光.mp4"
+                        android:textColor="@color/extraMenuName"
+                        android:textSize="11sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="100M"
+                            android:textColor="@color/chatRowMessageUserNameColor"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已下载"
+                            android:textColor="@color/chatRowMessageUserNameColor"
+                            android:textSize="11sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

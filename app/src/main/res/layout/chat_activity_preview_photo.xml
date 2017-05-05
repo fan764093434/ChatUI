@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chatInputTextColor">
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+        android:padding="16dp"
+        android:src="@drawable/chat_icon_button_clear"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cameraSettingBtnBackColorNormal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+            android:padding="11dp"
+            android:src="@drawable/chat_icon_camera_edit"/>
+
+        <ImageView
+            android:id="@+id/zoom"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/edit"
+            android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+            android:padding="11dp"
+            android:src="@drawable/chat_icon_button_camera_size"/>
+
+        <ImageView
+            android:id="@+id/add_text"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/zoom"
+            android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+            android:padding="11dp"
+            android:src="@drawable/chat_icon_button_camera_text"/>
+
+        <ImageView
+            android:id="@+id/add_emoji"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/add_text"
+            android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+            android:padding="11dp"
+            android:src="@drawable/chat_icon_button_camera_dress"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/add_emoji"
+            android:background="@drawable/chat_take_photo_camera_setting_btn_back"
+            android:padding="11dp"
+            android:src="@drawable/chat_icon_button_camera_more"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/chat_preview_photo_send_image_btn_back"
+            android:padding="10dp"
+            android:src="@drawable/chat_send_btn_src"/>
+    </RelativeLayout>
+</RelativeLayout>

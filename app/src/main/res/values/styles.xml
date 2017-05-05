@@ -1,0 +1,91 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ReceiveRedPacketActivityStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/chatReceiveRedActivityBack</item>
+        <item name="android:windowIsTranslucent">true</item>　
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>　　　　
+    </style>
+
+    <style name="PrepareRedPacketActivityStyle" parent="AppTheme">
+        <item name="colorPrimary">@color/prepareRedColorPrimary</item>
+        <item name="colorPrimaryDark">@color/prepareRedColorPrimaryDark</item>　
+    </style>
+
+    <style name="TransferAccountsActivityStyle" parent="AppTheme">
+        <item name="colorAccent">@color/chatTransferAccountsConfirmBtnNormalBackColor</item>
+    </style>
+
+    <style name="FullScreenStyle" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="FullScreenWithEnterExitAnimation" parent="FullScreenStyle">
+        <item name="android:windowIsTranslucent">true</item>　
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>　　　　
+    </style>
+
+    <!-- 登录界面是否显示密码的checkbox -->
+    <style name="ShowPasswordCheckBox">
+        <item name="android:button">@drawable/chat_show_password_checkbox</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+    <style name="MessageDateTimeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:textColor">@color/chatRowMessageTimeTextColor</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ChatAvatarStyle">
+        <item name="android:layout_width">@dimen/size_avatar</item>
+        <item name="android:layout_height">@dimen/size_avatar</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="ChatAvatarStyleReceive" parent="ChatAvatarStyle"></style>
+
+    <style name="ChatAvatarStyleSend" parent="ChatAvatarStyle"></style>
+
+    <style name="ChatUserNameStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/chatRowMessageUserNameColor</item>
+    </style>
+
+    <style name="ChatContentStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/chatRowMessageContentColor</item>
+    </style>
+
+    <style name="ChatContentStyleReceive" parent="ChatContentStyle"></style>
+
+    <style name="AnimationPopWindow">
+        <item name="android:windowEnterAnimation">@anim/pop_up</item>
+        <item name="android:windowExitAnimation">@anim/pop_down</item>
+    </style>
+
+    <!-- 相应进度提示样式 -->
+    <style name="loading_dialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:layout_width">200dp</item>
+    </style>
+
+</resources>

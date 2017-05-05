@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fsw.chat_ui">
+    <!-- JobService权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 使用相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true"/>
+    <!-- 使用闪光灯-->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- 写入文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 读取文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 使用麦克风 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 程序获得手机正确的分辨率之类的信息 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"/>
+
+    <!-- android:supportsRtl="true" 强制从右向左的布局 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.ChatActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ChatReceiveRedPacketActivity"
+            android:theme="@style/ReceiveRedPacketActivityStyle"/>
+        <activity
+            android:name=".ui.ChatPrepareRedPacketActivity"
+            android:theme="@style/PrepareRedPacketActivityStyle"/>
+        <activity
+            android:name=".ui.ChatRedPacketStatusActivity"
+            android:theme="@style/PrepareRedPacketActivityStyle"/>
+        <activity
+            android:name=".ui.ChatTransferAccountsActivity"
+            android:theme="@style/TransferAccountsActivityStyle"/>
+        <activity android:name=".ui.ChatVoiceCallActivity"/>
+        <activity
+            android:name=".ui.ChatCameraActivity"
+            android:theme="@style/FullScreenStyle"/>
+        <activity
+            android:name=".ui.ChatOperatePhotoActivity"
+            android:theme="@style/FullScreenStyle"/>
+        <activity
+            android:name=".ui.ChatVideoPlayActivity"
+            android:theme="@style/FullScreenWithEnterExitAnimation"/>
+        <activity
+            android:name=".ui.ChatBigImageActivity"
+            android:theme="@style/FullScreenWithEnterExitAnimation"/>
+
+        <service android:name=".service.MessageService"/>
+
+        <!-- 测试服务 -->
+        <service android:name=".service.MessageService"/>
+        <service
+            android:name=".service.MessageGuardService"
+            android:process=":messageGuardService"/>
+        <service
+            android:name=".service.WakeUpService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+    </application>
+
+</manifest>

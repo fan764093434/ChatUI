@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:RoundLayout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_time"
+        style="@style/MessageDateTimeStyle"
+        android:text="2017-03-27 14:59:00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size_avatar"
+        android:layout_marginRight="5dp"
+        android:gravity="right|center_vertical">
+
+        <com.fsw.chat_ui.widget.SendMessageTip
+            android:layout_width="@dimen/chat_row_tip_width"
+            android:layout_height="@dimen/chat_row_tip_width"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="@dimen/chat_row_tip_width"
+            android:layout_height="@dimen/chat_row_tip_width"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/chat_icon_fail_tip"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/user_avatar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.fsw.chat_ui.widget.CircleRelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="-23dp"
+                android:background="@drawable/chat_location_item_back"
+                RoundLayout:roundLayoutRadius="60dp">
+
+                <com.fsw.chat_ui.widget.CircleRelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerInParent="true"
+                    RoundLayout:roundLayoutRadius="55dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/chat_icon_location_example"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#44000000"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="杭州市西湖区"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="精确到5M"
+                            android:textColor="@color/white"
+                            android:textSize="9sp"/>
+                    </LinearLayout>
+                </com.fsw.chat_ui.widget.CircleRelativeLayout>
+            </com.fsw.chat_ui.widget.CircleRelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_icon_location_right"/>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            style="@style/ChatAvatarStyleSend"
+            android:src="@drawable/icon_logo"/>
+    </LinearLayout>
+</LinearLayout>

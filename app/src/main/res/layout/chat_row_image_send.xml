@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_time"
+        style="@style/MessageDateTimeStyle"
+        android:text="2017-03-27 14:59:00"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/size_avatar"
+        android:layout_marginRight="5dp">
+
+        <com.fsw.chat_ui.widget.SendMessageTip
+            android:layout_width="@dimen/chat_row_tip_width"
+            android:layout_height="@dimen/chat_row_tip_width"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:layout_width="@dimen/chat_row_tip_width"
+            android:layout_height="@dimen/chat_row_tip_width"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/chat_icon_fail_tip"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/chat_bubble_send_message_default">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="200dp"
+                android:maxWidth="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_loginbg"/>
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_logo"/>
+    </LinearLayout>
+</LinearLayout>
